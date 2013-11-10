@@ -255,6 +255,15 @@
 	return [CURRENT_CALENDAR dateFromComponents:components];
 }
 
+- (NSDate *) dateAtEndOfDay
+{
+	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
+	components.hour = 24;
+	components.minute = 0;
+	components.second = 0;
+	return [CURRENT_CALENDAR dateFromComponents:components];
+}
+
 - (NSDate *) dateAtStartOfWeek
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
