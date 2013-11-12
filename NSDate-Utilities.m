@@ -246,6 +246,19 @@
 	return [self dateByAddingMinutes: (dMinutes * -1)];
 }
 
+- (NSDate *) dateByAddingSeconds: (NSInteger) dSeconds
+{
+	NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + dSeconds;
+	NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
+	return newDate;
+}
+
+- (NSDate *) dateBySubtractingSeconds: (NSInteger) dSeconds
+{
+	return [self dateByAddingSeconds: (dSeconds * -1)];
+}
+
+
 - (NSDate *) dateAtStartOfDay
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];

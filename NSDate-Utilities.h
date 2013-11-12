@@ -55,6 +55,8 @@
 - (NSDate *) dateBySubtractingHours: (NSInteger) dHours;
 - (NSDate *) dateByAddingMinutes: (NSInteger) dMinutes;
 - (NSDate *) dateBySubtractingMinutes: (NSInteger) dMinutes;
+- (NSDate *) dateByAddingSeconds: (NSInteger) dSeconds;
+- (NSDate *) dateBySubtractingSeconds: (NSInteger) dSeconds;
 - (NSDate *) dateAtStartOfDay;
 - (NSDate *) dateAtEndOfDay;
 - (NSDate *) dateAtStartOfWeek;
