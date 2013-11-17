@@ -69,6 +69,16 @@
 	return newDate;		
 }
 
+#pragma mark - Date generators
+
++ (NSArray *)datesFromDate:(NSDate *)date withInterval:(NSTimeInterval)interval number:(NSInteger)num {
+    NSMutableArray *dates = [NSMutableArray arrayWithCapacity:num];
+    for (int i = 0; i < num; i++) {
+        [dates addObject:[date dateByAddingSeconds:interval * i]];
+    }
+    return dates;
+}
+
 #pragma mark Comparing Dates
 
 - (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate

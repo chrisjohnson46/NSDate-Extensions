@@ -24,6 +24,9 @@
 + (NSDate *) dateWithMinutesFromNow: (NSInteger) dMinutes;
 + (NSDate *) dateWithMinutesBeforeNow: (NSInteger) dMinutes;
 
+// Generate dates starting from passed date with time interval aligned
++ (NSArray *)datesFromDate:(NSDate *)date withInterval:(NSTimeInterval)interval number:(NSInteger)num;
+
 // Comparing dates
 - (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate;
 - (BOOL) isToday;
