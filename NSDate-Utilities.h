@@ -64,6 +64,7 @@
 - (NSDate *) dateAtMiddleOfDay;
 - (NSDate *) dateAtEndOfDay;
 - (NSDate *) dateAtStartOfWeek;
+- (NSDate *) dateAtEndOfWeek;
 
 
 // Retrieving intervals
