@@ -300,7 +300,7 @@
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
     int dayofweek = components.weekday;
-    components.day = (components.day - ((dayofweek) - 2));
+    components.day = components.day - dayofweek - 2;
 	components.hour = 0;
 	components.minute = 0;
 	components.second = 0;
