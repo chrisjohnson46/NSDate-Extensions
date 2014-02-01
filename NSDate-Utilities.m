@@ -299,7 +299,7 @@
 - (NSDate *) dateAtStartOfWeek
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    int dayofweek = components.weekday;
+    long dayofweek = components.weekday;
     components.day = components.day - dayofweek - 2;
 	components.hour = 0;
 	components.minute = 0;
@@ -310,7 +310,7 @@
 - (NSDate *) dateAtEndOfWeek
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-    int dayofweek = components.weekday;
+    long dayofweek = components.weekday;
     components.day = (components.day + (7 - dayofweek) + 1);
 	components.hour = 24;
 	components.minute = 0;
